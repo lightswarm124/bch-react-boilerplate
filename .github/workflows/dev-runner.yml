@@ -2,17 +2,20 @@ name: Local Runner Test
 
 on:
   push:
-    branches:
-      - main
-      - master
-      - dev
-      - "*" # catch-all safety
+    branches: [main, dev] # it will trigger on whichever exists
+  workflow_dispatch:
 
 jobs:
   test-runner:
-    runs-on: [self-hosted, ubuntu]
+    runs-on: self-hosted # important: matches your local runner
+
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Show runner info
         run: |
-          echo "Hello from $(hostname)"
+          echo "Running on host: $(hostname)"
+          echo "OS info:"
           uname -a
+          echo "Runner labels: $RUNNER_LABELS"
