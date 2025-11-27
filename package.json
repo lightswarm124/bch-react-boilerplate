@@ -1,0 +1,23 @@
+{
+  "name": "bch-react-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests\" && exit 0",
+    "lint": "node --check index.js || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightswarm124/bch-react-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lightswarm124/bch-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/lightswarm124/bch-react-boilerplate#readme"
+}
