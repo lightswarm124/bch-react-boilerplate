@@ -1,13 +1,18 @@
 name: Local Runner Test
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+      - dev
+      - "*" # catch-all safety
 
 jobs:
   test-runner:
     runs-on: [self-hosted, ubuntu]
     steps:
-      - name: Check runner info
+      - name: Show runner info
         run: |
-          echo "Running on $(hostname)"
+          echo "Hello from $(hostname)"
           uname -a
